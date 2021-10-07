@@ -1,0 +1,45 @@
+/* ResetCSS v0.2 | 09/14/2018 */
+/* TODO: MOVE TYPEFACE STUFF TO ANOTHER STYLESHEET */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-size: 1.15em;
+}
+header, footer, nav, main, section, article, aside, address,  {
+    display: block;
+}
+
+/* Header Sizing */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+}
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+h3 {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+h5, h6 {
+    font-weight: 300;
+}
+
+/* Material Icons Reset */
+.material-icons {
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+}

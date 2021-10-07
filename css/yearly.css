@@ -1,0 +1,19 @@
+main {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "punches";
+
+    align-items: unset;
+    align-content: unset;
+}
+.punch-container > .info {
+    padding: 0.25em;
+    background-color: #8A5;
+    text-align: center;
+}
+
+@media only screen and (min-width: 68em) {
+    .punch-container {
+        margin-left: 1em;
+    }
+}

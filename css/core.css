@@ -1,0 +1,131 @@
+/*
+    Container
+*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "main-nav"
+    "main-content";
+}
+
+/*
+    Naviagtion
+*/
+nav {
+    display: grid;
+    grid-auto-rows: min-content;
+
+    grid-area: "main-nav";
+
+    font-size: 1.2em;
+    font-weight: 300;
+    background-color: #333;
+}
+nav > .items {
+    display: grid;
+    grid-auto-rows: min-content;
+
+    overflow-y: hidden;
+    max-height: 40em;
+    transition: max-height 0.15s ease-out;
+}
+nav[closed] > .items {
+    max-height: 0;
+    transition: max-height 0.1s ease-out;
+}
+nav > .items > *, nav > .brand {
+    padding: 0.6em;
+
+    color: white;
+    opacity: 0.5;
+
+    text-align: center;
+    text-decoration: none;
+}
+nav > .brand {
+    opacity: 1;
+    font-size: 1.5em;
+    font-weight: 400;
+
+    border-bottom: 1px solid #2A2A2A;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+nav > .items > a {
+    opacity: 1;
+}
+nav .items > a[active] {
+    background-color: #222;
+}
+nav .items > a:active {
+    background-color: #9B6;
+}
+
+/*
+    Main Content
+*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-template-areas:
+    "calendar"
+    "punches";
+
+    grid-area: "main-content";
+}
+
+/*
+    Calendar
+*/
+.calendar {
+    grid-area: "calendar";
+}
+
+@media only screen and (min-width: 68em) {
+    /*
+        Container
+    */
+    .container {
+        grid-template-columns: 15em 1fr;
+        grid-template-areas:
+        "main-nav main-container";
+    }
+
+    /*
+        Navigation
+    */
+    nav {
+        min-height: 100vh;
+    }
+    nav[closed] > .items {
+        max-height: initial;
+    }
+
+    /*
+        Main Content
+    */
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "calendar punches";
+
+        align-content: center;
+        align-items: center;
+    }
+
+    .calendar {
+        margin-left: 1em;
+    }
+    .punch-container {
+        margin-right: 1em;
+    }
+}
+@media only screen and (min-width: 85em) {
+    nav > .items > a:hover {
+        background-color: #8A5;
+    }
+}

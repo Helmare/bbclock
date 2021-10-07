@@ -1,0 +1,32 @@
+* {
+    font-family: 'Consolas' !important;
+    font-size: 11pt;
+}
+@page {
+    margin: 0.75in;
+}
+.header {
+    font-size: 24pt;
+    font-weight: bold;
+}
+.indent {
+    margin-left: 2em;
+}
+.month {
+    margin-top: 18pt;
+}
+.punch {
+    margin-top: 15pt;
+}
+.punch > .header {
+    font-size: 16pt;
+    font-weight: normal;
+}
+.punch > .item {
+    display: inline-block;
+    min-width: 32vw;
+}
+.footer {
+    font-size: 8pt;
+    margin-top: 16pt;
+}

@@ -1,0 +1,123 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    border: 1px solid #8A5;
+
+    font-size: 0.75em;
+    font-weight: 300;
+    user-select: none;
+}
+
+.calendar > .header {
+    grid-column: 2 / -2;
+    
+    background-color: #8A5;
+
+    font-size: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+
+    height: 2.5em;
+    line-height: 2.5em;
+}
+
+.calendar > .header-btn {
+    background-color: #8A5;
+    text-align: center;
+    padding: 0.5em;
+    padding-bottom: 0.4em;
+
+    font-size: 2em;
+    height: 1.875em;
+    line-height: 0.9375em;
+
+    cursor: pointer;
+}
+
+.calendar > .header-btn:active {
+    background-color: #9B6;
+}
+
+.calendar > .day-header {
+    font-size: 0.9em;
+    height: 1.75em;
+    line-height: 1.75em;
+    text-align: center;
+
+    font-weight: 400;
+    color: #8A5;
+
+}
+.calendar > .day {
+    height: 2.1em;
+    line-height: 2.1em;
+
+    font-size: 1.25em;
+    text-align: center;
+
+    cursor: pointer;
+
+    border-top: 1px solid #AAA;
+    border-right: 1px solid #AAA;
+}
+.calendar > .day:nth-child(7n + 4) {
+    border-right: none;
+}
+.calendar > .day > p {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.calendar > .day:hover > p {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.calendar > .day[last-month] > p, .calendar > .day[next-month] > p {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: default;
+}
+.calendar > .day[selected] {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.calendar > .day[punched] {
+    background-color: #8A5;
+}
+.calendar > .day[punched][selected] {
+    background-color: #6D8844;
+}
+.calendar > .day[overnight] {
+    background-color: #76C;
+}
+.calendar > .day[overnight][selected] {
+    background-color: #5f52a3;
+}
+.calendar > .day[assoc=ZOOM] {
+    background-color: #58F;
+}
+.calendar > .day[assoc=ZOOM][selected] {
+    background-color: #446DCC;
+}
+
+.calendar > .footer {
+    grid-column: 1 / -1;
+    grid-row-start: 9;
+    
+    padding: 0.25em;
+
+    background-color: #8A5;
+    text-align: center;
+}
+
+@media only screen and (min-width: 45em) {
+    .calendar {
+        font-size: 0.9em;
+    }
+}
+@media only screen and (min-width: 85em) {
+    .calendar {
+        font-size: 1.15em;
+    }
+}
